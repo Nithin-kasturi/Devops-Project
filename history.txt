@@ -1,0 +1,35 @@
+1  sudo apt update
+    2  git clone https://github.com/Nithin-kasturi/Devops-Project.git
+    3  # Add Docker's official GPG key:
+    4  sudo apt-get update
+    5  sudo apt-get install ca-certificates curl
+    6  sudo install -m 0755 -d /etc/apt/keyrings
+    7  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+    8  sudo chmod a+r /etc/apt/keyrings/docker.asc
+    9  # Add the repository to Apt sources:
+   10  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   11  sudo apt-get update
+   12  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+   13  sudo groupadd docker
+   14  sudo usermod -aG docker $USER
+   15  docker run hello-world
+   16  newgrp docker
+   17  lss
+   18  ;s
+   19  ls
+   20  kkubectl get pods
+   21  kubectl get pods
+   22  kubectl get pods -n argoocd
+   23  kubectl create namespace argocd
+   24  kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+   25  kubectl get svc -n argocd
+   26  kubectl edit svc argocd-server
+   27  kubectl edit svc argocd-server -n argocd
+   28  kubectl edit svc argocd-server
+   29  kubectl edit svc argocd-server -n argocd
+   30  kubectl get svc -n argocd
+   31  kubectl port-forward --address 0.0.0.0 service/argocd-server 31252:31252 -n argocd
+   32  kubectl port-forward --address 0.0.0.0 service/argocd-server 31182:31182 -n argocd
+   33  kubectl port-forward --address 0.0.0.0 service/argocd-server 31182:80-n argocd
+   34  kubectl port-forward --address 0.0.0.0 service/argocd-server 31182:80 -n argocd
