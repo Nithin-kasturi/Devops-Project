@@ -21,27 +21,43 @@ pipeline{
         }
         stage('Build docker images'){
             steps{
+                script{
                 echo 'Building docker image'
+
+                }
             }
         }
         stage('Trivy scan'){
             steps{
-                echo 'Trivy scan!!'
+                script{
+                    echo 'Trivy scan!!'
+                
+                }
+
             }
         }
         stage('Push image to docker hub'){
             steps{
+                script{
                 echo 'Push image to docker hub'
+
+                }
             }
         }
         stage('Install kubectl argocd cli'){
+            
             steps{
-                echo 'Install kubectl argocd cli'
+                script{
+                    echo 'Install kubectl argocd cli'
+                }
             }
         }
         stage('Apply kuebernets manifest & sync app with argocd'){
             steps{
-                echo 'Apply kuebernets manifest & sync app with argocd'
+                script{
+                    echo 'Apply kuebernets manifest & sync app with argocd'
+
+                }
             }
         }
     }
