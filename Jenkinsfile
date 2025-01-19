@@ -5,7 +5,7 @@ pipeline{
     }
     environment{
         DOCKER_HUB_REPO='nithin8/devops-project'
-        DOCKER_HUB_CREDENTIAL_ID='docker-key-pair'
+        DOCKER_HUB_CREDENTIAL_ID='docker'
     }
     stages{
         stage('Checkout github'){
