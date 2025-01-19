@@ -30,7 +30,7 @@ pipeline{
             steps{
                 script{
                     echo 'Trivy scan!!'
-                
+                    sh 'trivy --severity HIGH,CRITICAL --skip-update --no-progress image --format table -o trivy-scan-report.txt ${DOCKER_HUB_REPO}:latest'
                 }
 
             }
