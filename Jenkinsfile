@@ -3,6 +3,9 @@ pipeline{
     tools{
         nodejs 'NodeJS'
     }
+    environment{
+        DOCKER_HUB_REPO='nithin8/devops-project'
+    }
     stages{
         stage('Checkout github'){
             steps{
@@ -18,8 +21,8 @@ pipeline{
         stage('Build docker images'){
             steps{
                 script{
-                echo 'Building docker image'
-
+                    echo 'Building docker image'        
+                    docker.build("${DOCKER_HUB_REPO}:latest")
                 }
             }
         }
