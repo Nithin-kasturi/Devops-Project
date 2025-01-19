@@ -5,6 +5,7 @@ pipeline{
     }
     environment{
         DOCKER_HUB_REPO='nithin8/devops-project'
+        DOCKER_HUB_CREDENTIAL_ID='nithin8'
     }
     stages{
         stage('Checkout github'){
@@ -22,7 +23,7 @@ pipeline{
             steps{
                 script{
                     echo 'Building docker image'        
-                    docker.build("${DOCKER_HUB_REPO}:latest")
+                    dockerImage=docker.build("${DOCKER_HUB_REPO}:latest")
                 }
             }
         }
@@ -38,8 +39,10 @@ pipeline{
         stage('Push image to docker hub'){
             steps{
                 script{
-                echo 'Push image to docker hub'
-
+                echo 'Push image to docker hub' 
+                docker.withRegistry('https://registry.hub.docker.com',"${DOCKER_HUB_CREDENTIAL_ID}"){
+                   dockerImage.push("latest")
+                }
                 }
             }
         }
