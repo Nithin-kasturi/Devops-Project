@@ -59,20 +59,18 @@ pipeline{
         //         }
         //     }
         // }
-        stage('Apply kuebernets manifest & sync app with argocd'){
-            steps{
-                script{
-                    echo 'Apply kuebernets manifest & sync app with argocd'
-                    kubeconfig(credentialsId: 'kubeconfig', serverUrl: 'https://192.168.49.2:8443') {
-                            sh '''
-                                argocd login 18.204.209.207:31559 --username admin --password ${kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d}
-                                --insecure
-                                argocd app sync argocd-jenkins
-                            '''
-                    }   
-                }
-            }
-        }
+        stage('Apply Kubernetes Manifests & Sync App with ArgoCD'){
+			steps {
+				script {
+					kubeconfig(credentialsId: 'kubeconfig', serverUrl: 'https://192.168.49.2:8443') {
+    						sh '''
+						argocd login 44.211.76.138:31559 --username admin --password $(kubectl get secret -n argocd argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d) --insecure
+						argocd app sync argocdjenkins
+						'''
+					}	
+				}
+			}
+		}
     }
     post{
         success{
