@@ -58,7 +58,7 @@ pipeline{
 
         //         }
         //     }
-        }
+        // }
         stage('Apply kuebernets manifest & sync app with argocd'){
             steps{
                 script{
