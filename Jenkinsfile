@@ -46,18 +46,18 @@ pipeline{
                 }
             }
         }
-        stage('Install kubectl argocd cli'){
+        // stage('Install kubectl argocd cli'){
             
-            steps{
-                script{
-                    sh '''
-                    echo 'Install kubectl argocd cli'
-				    curl -sSL -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
-				    chmod +x /usr/local/bin/argocd
-                    '''
+        //     steps{
+        //         script{
+        //             sh '''
+        //             echo 'Install kubectl argocd cli'
+		// 		    curl -sSL -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
+		// 		    chmod +x /usr/local/bin/argocd
+        //             '''
 
-                }
-            }
+        //         }
+        //     }
         }
         stage('Apply kuebernets manifest & sync app with argocd'){
             steps{
