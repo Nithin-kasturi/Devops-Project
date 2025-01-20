@@ -5,13 +5,13 @@ pipeline{
     }
     environment{
         DOCKER_HUB_REPO='nithin8/devops-project'
-        DOCKER_HUB_CREDENTIAL_ID='docker'
+        DOCKER_HUB_CREDENTIAL_ID='jenkins-docker'
     }
     stages{
         stage('Checkout github'){
             steps{
                 echo 'Checkout github'
-                git credentialsId: 'devops-project', url: 'https://github.com/Nithin-kasturi/Devops-Project.git'
+                git credentialsId: 'github-credentials', url: 'https://github.com/Nithin-kasturi/Devops-Project'
             }
         }
         stage('Install node dependencies'){

@@ -32,4 +32,4 @@
    31  kubectl port-forward --address 0.0.0.0 service/argocd-server 31252:31252 -n argocd
    32  kubectl port-forward --address 0.0.0.0 service/argocd-server 31182:31182 -n argocd
    33  kubectl port-forward --address 0.0.0.0 service/argocd-server 31182:80-n argocd
-   34  kubectl port-forward --address 0.0.0.0 service/argocd-server 31182:80 -n argocd
+   34  kubectl port-forward --address 0.0.0.0 service/argocd-server 3118 -n argocd  2:80 -n argocd
