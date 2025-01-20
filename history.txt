@@ -33,3 +33,282 @@
    32  kubectl port-forward --address 0.0.0.0 service/argocd-server 31182:31182 -n argocd
    33  kubectl port-forward --address 0.0.0.0 service/argocd-server 31182:80-n argocd
    34  kubectl port-forward --address 0.0.0.0 service/argocd-server 3118 -n argocd  2:80 -n argocd
+ubuntu@ip-172-31-90-152:~$ history
+    1  docker run hello-world
+    2  sudo systemctl enable docker.service
+    3  curl -LO https://github.com/kubernetes/minikube/releases/latest/download/minikube-linux-amd64
+    4  sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
+    5  minikube start
+    6  snap install kubectl --classic
+    7  kubectl version --client
+    8  snap install kubectl --classic
+    9  sudo snap install kubectl --classic
+   10  minikube status
+   11  docker ps
+   12  docker run -d --name jenkins   -p 8080:8080   -p 50000:50000   -v /var/run/docker.sock:/var/run/docker.sock   -v $(which docker):/usr/bin/docker   -u root   -e DOCKER_GID=$(getent group docker | cut -d: -f3)   --network minikube   jenkins/jenkins:lts
+   13  ls /var/jenkins_home/secrets/initialAdminPassword
+   14  cat /var/jenkins_home/secrets/initialAdminPassword
+   15  docker logs jenkins
+   16  docker restart jenkins
+   17  ls
+   18  cd Devops-Project/
+   19  ls
+   20  git pull
+   21  ls
+   22  cd K8-Manifests/
+   23  ls
+   24  cd ..
+   25  git pull
+   26  vi Jenkinsfile
+   27  git add .
+   28  git commit -m 'Modify jenkins'
+   29  git push origin master
+   30  vi J
+   31  vi Jenkinsfile
+   32  cd /
+   33  docker exec jenkins -it basg
+   34  docker exec jenkins -it bash
+   35  docker exec -it jenkins bash
+   36  docker jenkins restart
+   37  docker restart jenkins
+   38  kubectl create namespace argocd
+   39  kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+   40  kubectl gets pods -n argocd
+   41  miniube status
+   42  cd De
+   43  ks
+   44  ls
+   45  docker
+   46  ls
+   47  cd home/
+   48  ls
+   49  cd ..
+   50  cd //
+   51  cd ..
+   52  exit
+   53  sudo apt update
+   54  git clone https://github.com/Nithin-kasturi/Devops-Project.git
+   55  # Add Docker's official GPG key:
+   56  sudo apt-get update
+   57  sudo apt-get install ca-certificates curl
+   58  sudo install -m 0755 -d /etc/apt/keyrings
+   59  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+   60  sudo chmod a+r /etc/apt/keyrings/docker.asc
+   61  # Add the repository to Apt sources:
+   62  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+   63    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   64  sudo apt-get update
+   65  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+   66  sudo groupadd docker
+   67  sudo usermod -aG docker $USER
+   68  docker run hello-world
+   69  newgrp docker
+   70  lss
+   71  ;s
+   72  ls
+   73  kkubectl get pods
+   74  kubectl get pods
+   75  kubectl get pods -n argoocd
+   76  kubectl create namespace argocd
+   77  kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+   78  kubectl get svc -n argocd
+   79  kubectl edit svc argocd-server
+   80  kubectl edit svc argocd-server -n argocd
+   81  kubectl edit svc argocd-server
+   82  kubectl edit svc argocd-server -n argocd
+   83  kubectl get svc -n argocd
+   84  kubectl port-forward --address 0.0.0.0 service/argocd-server 31252:31252 -n argocd
+   85  kubectl port-forward --address 0.0.0.0 service/argocd-server 31182:31182 -n argocd
+   86  kubectl port-forward --address 0.0.0.0 service/argocd-server 31182:80-n argocd
+   87  kubectl port-forward --address 0.0.0.0 service/argocd-server 31182:80 -n argocd
+   88  history
+   89  logout
+   90  exit
+   91  argocd admin initial-password [flags]
+   92  kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+   93  exit
+   94  ls
+   95  ls -la
+   96  cd .kube
+   97  ls
+   98  cat config
+   99  cat /home/ubuntu/.minikube/ca.crt
+  100  cat /home/ubuntu/.minikube/ca.crt | base64 -w 0 ;echo
+  101  cat /home/ubuntu/.minikube/profiles/minikube/client.crt |base64 -w 0; echo
+  102  cat /home/ubuntu/.minikube/profiles/minikube/client.key | base64 -w 0
+  103  cat /home/ubuntu/.minikube/profiles/minikube/client.key | base64 -w 0; echo
+  104  cd ..
+  105  history
+  106  docker images
+  107  docker run jenkins
+  108  docker strt jenkins
+  109  docker start jenkins
+  110  docker run jenkins
+  111  docker ps
+  112  kubectl get pods
+  113  kubectl get pods -n argoocd
+  114  minikube start
+  115  minikube status
+  116  cd Devops-Project/q
+  117  cd Devops-Project/
+  118  minikube status
+  119  minikube strt
+  120  minikube start
+  121  docker s -a
+  122  docker ps -a
+  123  docker start minikube
+  124  docker run minikube
+  125  docker login
+  126  docker logs minikube
+  127  docker start minikube
+  128  docker stop minikube
+  129  docker start minikube
+  130  docker rm minikube
+  131  docker start minikube
+  132  docker run minikube
+  133  minikube status
+  134  [200~curl -LO https://github.com/kubernetes/minikube/releases/latest/download/minikube-linux-amd64
+  135  sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
+  136  curl -LO https://github.com/kubernetes/minikube/releases/latest/download/minikube-linux-amd64
+  137  sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
+  138  minikube status
+  139  minikube start
+  140  minikube status
+  141  docker ps -a
+  142  docker rm 5ee867f97cad
+  143  docker ps -a
+  144  minikube start
+  145  `minikube logs --file=logs.txt`
+  146  minikube logs --file=logs.txt
+  147  sudo systemctl restart docker
+  148  minikube start
+  149  docker ps -a
+  150  minikuybe status
+  151  minikube status
+  152  docker start minikube
+  153  minikube statys
+  154  minikube status
+  155  docker run minikube
+  156  curl -LO https://github.com/kubernetes/minikube/releases/latest/download/minikube-linux-amd64
+  157  sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
+  158  minikube
+  159  minikube statys
+  160  minikube status
+  161  minikube delete --all
+  162  docker ps -a
+  163  rm -rf ~/.minikube
+  164  minikube start
+  165  miinkube status
+  166  minikube status
+  167  kubectl create namespace argocd
+  168  kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+  169  kubectl get svc -n argocd
+  170  kubectl edit svc argocd-server -n argoc
+  171  kubectl edit svc argocd-server -n argocd
+  172  kubectl get svc -n argocd
+  173  kubectl port-forward --address=0.0.0.0 service/argocd-server 30488:80 -n argocd
+  174  kubectl port-forward --address=0.0.0.0 service/argocd-server 31559:80 -n argocd
+  175  kubectl port-forward --address 0.0.0.0 service/argocd-server 31559:80 -n argocd
+  176  cd var
+  177  cd /var
+  178  ls
+  179  cd /lib
+  180  ls
+  181  cd aot
+  182  cd apt
+  183  ls
+  184  cd ..
+  185  kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+  186  docker start jenkins
+  187  docker ps -a
+  188  docker start 0f59ba598e19
+  189  docker rm ubuntu@ip-172-31-90-152:/$ docker start 0f59ba598e19
+  190  Error response from daemon: network 1d48d16ce3594e08cbb448f720a994dd1a682179e6936b4ca40d3294d8cb743c not found
+  191  Error: failed to start containers: 0f59ba598e19
+  192  ubuntu@ip-172-31-90-152:/$
+  193  docker rm ubuntu@ip-172-31-90-152:/$ docker start 0f59ba598e19
+  194  Error response from daemon: network 1d48d16ce3594e08cbb448f720a994dd1a682179e6936b4ca40d3294d8cb743c not found
+  195  Error: failed to start containers: 0f59ba598e19
+  196  ubuntu@ip-172-31-90-152:/$
+  197  docker rm 0f59ba598e19
+  198  docker ps-a
+  199  docker ps- a
+  200  docker ps -a
+  201  docker run -d --name jenkins   -p 8080:8080   -p 50000:50000   -v /var/run/docker.sock:/var/run/docker.sock   -v $(which docker):/usr/bin/docker   -e DOCKER_GID=$(getent group docker | cut -d: -f3)   --network minikube   jenkins/jenkins:lts
+  202  docker logs jenkins
+  203  jenkins restart
+  204  docker restart jenkins
+  205  sudo -u jenkins docker ps
+  206  docker restart jenkins
+  207  sudo usermod -aG docker $(whoami)
+  208  ls -l /var/run/docker.sock
+  209  sudo usermod -aG docker jenkins
+  210  sudo usermod -a -G docker jenkins
+  211  sudo usermod -a -G docker $USER
+  212  grep docker /etc/group
+  213  usermod -aG docker jenkins
+  214  usermod -aG root jenkins
+  215  chmod 664 /var/run/docker.sock
+  216  ls -l /var/run/docker.sock
+  217  sudo chmod 666 /var/run/docker.sock
+  218  ls -l /var/run/docker.sock
+  219  docker restart jenkins
+  220  docker exec -it jenkins bash
+  221  cd ..
+  222  ls
+  223  cd /
+  224  cd./
+  225  cd ./
+  226  cd /home
+  227  ls
+  228  cd ~
+  229  ls
+  230  cd Devops-Project/
+  231  ls
+  232  docker exec -t jenkins bash
+  233  curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin v0.18.3
+  234  trivy --version
+  235  sudo snap install trivy
+  236  trivy --version
+  237  docker exec -t jenkins bash
+  238  docker exec -it jenkins bash
+  239  chmod 777 /usr/local/bin/trivy
+  240  docker exec -it jenkins bash
+  241  docker ps
+  242  docker exec -it df270f51a5ca bash
+  243  docker exec -u root -it jenkins /bin/bash
+  244  kubectl cluste-info
+  245  kubectl cluster-info
+  246  docker exec -u root -it jenkins /bin/bash
+  247  cd ..
+  248  ls
+  249  cd ~
+  250  ls
+  251  cd /
+  252  ;s
+  253  la
+  254  ls
+  255  ls -la
+  256  ls -a
+  257  cd ~
+  258  ls
+  259  cd ..
+  260  ls
+  261  cd //
+  262  cd ..
+  263  exit
+  264  ls
+  265  ls -a
+  266  cd .kube
+  267  ;s
+  268  ls
+  269  cat config
+  270  cd ..
+  271  cat /home/ubuntu/.minikube/ca.crt | base64 -w 0; echo
+  272  cat /home/ubuntu/.minikube/profiles/minikube/client.crt | base64 -w 0 ;echo
+  273  cat /home/ubuntu/.minikube/profiles/minikube/client.key | base64 -w 0; echo
+  274  LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFb3dJQkFBS0NBUUVBb3JPRTQyYzUrWHQrZDh0eGJVSFc1eU1kd0U3OUFiVkVGYjlUcmRhUGZxeXlidTkzCmJNOTZmMXBCTnU1RStNa2hzd1pQVWNCaG4xYWYyaU5LS1NZUythcHpQaFRjdDc1MlFjVmtCN1FpU0N2TUhWc0YKaU5ISnQvTXJnNS9LY1JQQ1dGdHpuc2JhMEFnY2VkQzB4TzVLWjkyVm5FREU0L0piTU5adnJwU3V1WFdDMlR2WAptQUpsRFVBWU9MVmg0WXZIR3VmY0tzY0xPeCtpOE1lNDNmOC9qbXBra3pEYjVTTjBpU3ZvTXRyREYzMlZrekwvCi9TWk5vckZEL056NElsNDVoU2lkOVAxQms5WklIY0g2NSttTGFiOFIwME5KVTQzZzJBZ25haXQyWmVqdTltVmkKZHh0WTh0aHUvancybXNRc2t4aC9YK1l4RTN5TnpPRWluQmhlaXdJREFRQUJBb0lCQUYvU0JEQjlTZXFCYmFFVgp3dTZLdVFzVlpsOHM1ZHJNcTVWM1Fjditzakh6ZVg3V0wycDQ0dmIvNjZwek4xR2grdVBaa250ZUp1QlZmdjFVCmpVZWdzY295Tlg3WmdJZ0NkdGtUYkc4UkNxT2dqNnkyUDVNdG9uUmdsVDhHcTQ1ZkNiVkozdFVpM2hsb3ZZU00KZ3ZuOE1QdnN4MERuOEUwakhjdXNic2ZOcnYxdnBFRlArUjZCZm9jMVlBVmJveTNwNGF4VjQ3OGxwUUxZcVFKQQoweHZjQmJOZFJnNC9sZXdIVTF4a1plb01wSkc3akVmcm5oLzliNmQvYk5RUUZCU0hvalpySUZpdXlKYnpJZHoyCmRnMVdXNmxJaVFXQysxdGk0TWl3TXdNU0t0RGpOeFIyOWFUVnY4VmxvY3F0M0lweXB1ZUNNTkIxc1JDSFVjSjgKckFyaStXa0NnWUVBemw3WVRrbzVPeWFPOWxSdFN0VzBtdGdkMU1hdUdBOGZrMVNnM3BDVEZkL3MxRlVxZnZWNwo1ZXhKQnZZUEtwM2lvZ2ZmYndGdHdFcU41U1FPVDFmcmREN3BDYTNuRGlVMWxmU3l0OW9ncHR0ZnA5aWxydkV5CjJpQ3ZyeGNvanpKMVhrNW9VSTNUUTVBOWt1M0xTaW1Ia3dCTDFKbGNOQnBSVXBINkQwbnNoZGNDZ1lFQXlkUXYKeGJsWmtieXgxeTcxOUZqbDY0U3NrTzZMYWpsNUt0UzFtc3BWaXJPSURiSDQ3L3Y5VlowaUhRY2JaVHFQcnJHLwoveFowRHlpa0xKaEVBbnJmTHN5aSsvRERGZUt2LzZtREJYT0RjVU5xZTFsN2RZZmpXK2lnVDJSM25sSTRWRVNsCkJWMFpIdFErOHl1WFB0dUNua3Q0c0dpeWMwKzQ1eE9SZHVnSGJtMENnWUJqWXRYMVRsV2xvUG8wczVBMi9CaVEKZ2doTDBxdEJOdmRUOHV2T2cvM3lDUGQ3Z3RDR2VCOEZLZmc1ZkFMdDJUK3VIUENEKzBJcDJ6M2UzckJ0a2IvNQpLZHI5S0YwZ09OZEhzcUxuWEF0aGtFRFBDczB3SlVVQ083K2dLUjBGYVoyUW4xNHBmVVFEUTlJRGtyWFdyNDExClJDMUE0K0s5elBiaE55QWdnTStCM1FLQmdRQ3k3UDE5R0ppamJ0bHFueU5GQUJxMDlPWFhodUxweFJINk9xRFYKSFZOQXAzQ1NVNWtSaUNCSzZnYjRIUGpZZ1ZZbjFVVVU2OTd3SVdPS2RXSzFvQ0NENkw4RkE2aXZta3ZWSjM0VQpNeGZ3TFlnVTJudHM4bzlKUjYzM05HWW5ZVlMyd0RSYjBQRVlONm1uQXBvUEM2TjhtZ1Bnd0xDVE1iWUdoWDZNCkg1K1c4UUtCZ0hHOVhZR20rN2tsckpXVENaZStYQUxFaWJTMTdKTnRUZkRVZXg4TzRPMDFWQ0dwejNTTG9pUjcKQitrWDA3TUpybnkzYVg5SDYyRU9KcjB4c2IvVTBsVlprak9YRHBhYkhWVGxldEVhRjJFUk9UcTJBUkorR3FGSwpraE94NUJCVWtSOEZQb1d3ZGRUMXRYZlVtNXk5RmVZM2lJQmgvU3ZuZjBscEhWQzkxMDczCi0tLS0tRU5EIFJTQSBQUklWQVRFIEtFWS0tLS0tCg==
+  275  cat /home/ubuntu/.minikube/profiles/minikube/client.key | base64 -w 0; echo
+  276  kubectl cluster-info
+  277  docker logs jenkins
+  278  history
